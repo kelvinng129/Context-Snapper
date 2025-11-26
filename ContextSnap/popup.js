@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const screenshotImg = document.getElementById('screenshot-img');
-  const titleEl = document.getElementById('page-title');
+  const titleInput = document.getElementById('title-input');
   const urlEl = document.getElementById('page-url');
-  const copyBtn = document.getElementById('copy-btn');
-  const downloadBtn = document.getElementById('download-btn');
+  const btnCopyAll = document.getElementById('copy-all');
+  const btnCopyLink = document.getElementById('copy-link');
+  const btnCopyImg = document.getElementById('copy-img');
+  const btnDownload = document.getElementById('download-btn');
   const msgEl = document.getElementById('msg');
+
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const activeTab = tabs[0];
